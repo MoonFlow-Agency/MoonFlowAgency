@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services — MoonFlow Agency</title>
+<meta name="description" content="Consultance, branding, community management et création de sites web : découvrez les services de MoonFlow Agency." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<style>
+.svc-block { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 3.5rem; align-items: center; padding: clamp(2.5rem,6vw,5rem) 0; border-bottom: 1px solid rgba(142,165,154,0.18); }
+.svc-block:nth-child(even) .svc-visual { order: 2; }
+.svc-num { font-size: 5rem; font-weight: 800; color: var(--beige); line-height: 0.8; letter-spacing: -0.04em; }
+.svc-visual { aspect-ratio: 1; border-radius: var(--radius); position: relative; overflow: hidden; box-shadow: 0 30px 60px -35px rgba(63,87,71,0.4); }
+.svc-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.22,1,0.36,1); }
+.svc-block:hover .svc-visual img { transform: scale(1.05); }
+.svc-visual .star {
+  position: absolute; top: 1rem; left: 1rem; z-index: 2;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(250,249,247,0.92); color: var(--eucalyptus);
+  font-size: 1.4rem; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 20px -8px rgba(63,87,71,0.4);
+}
+/* Placeholders pour services sans photo (en attendant) */
+.svc-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.svc-placeholder span { font-size: 4rem; color: rgba(250,249,247,0.9); }
+.svc-placeholder-1 { background: linear-gradient(135deg, var(--sauge), var(--eucalyptus)); }
+.svc-placeholder-2 { background: linear-gradient(135deg, var(--eucalyptus), var(--nude)); }
+.svc-content .section-eyebrow { color: var(--eucalyptus); }
+.svc-content h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 1rem; }
+.svc-content > p { margin-bottom: 1.5rem; font-size: 1.05rem; }
+.svc-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.svc-tag { background: var(--beige); color: var(--sauge); font-size: 0.85rem; font-weight: 500; padding: 0.45rem 1rem; border-radius: 999px; }
+
+.process { background: var(--beige); }
+.process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; margin-top: 3rem; }
+.process-step { text-align: center; }
+.process-step .pn { width: 54px; height: 54px; border-radius: 50%; background: var(--sauge); color: var(--beige); display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 1.1rem; }
+.process-step h4 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.process-step p { font-size: 0.93rem; }
+
+@media (max-width: 860px) {
+  .svc-block { grid-template-columns: 1fr; gap: 1.8rem; }
+  .svc-block:nth-child(even) .svc-visual { order: 0; }
+  .svc-visual { max-width: 280px; }
+  .process-grid { grid-template-columns: 1fr 1fr; gap: 2.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo"><img src="assets/symbol-eucalyptus-t.png" alt="" /><span>MoonFlow<br>Agency</span></a>
+  <nav class="nav">
+    <a href="index.html">Accueil</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="realisations.html">Réalisations</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="padding:0.7rem 1.4rem;">Demander un devis</a>
+  </nav>
+  <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<section class="page-hero">
+  <p class="eyebrow reveal">Nos services</p>
+  <h1 class="reveal d1">Une expertise complète,<br>au service de votre image</h1>
+  <p class="reveal d2">De la stratégie à la mise en œuvre, nous couvrons chaque étape de votre présence digitale avec méthode et créativité.</p>
+</section>
+
+<section style="padding-top:1rem;">
+  <div class="wrap">
+
+    <div class="svc-block" id="consultance">
+      <div class="svc-visual reveal"><span class="star">✦</span><img src="assets/svc-consultance.jpg" alt="Audit et stratégie digitale" /></div>
+      <div class="svc-content">
+        <p class="section-eyebrow reveal">01 — Consultance</p>
+        <h2 class="reveal d1">Audit, recommandations & stratégie</h2>
+        <p class="reveal d2">Avant d'agir, nous analysons. Nous étudions votre marché, votre positionnement et vos objectifs pour construire un plan d'action clair et actionnable, qui sert de boussole à tout votre développement digital.</p>
+        <div class="svc-tags reveal d3">
+          <span class="svc-tag">Audit digital</span>
+          <span class="svc-tag">Positionnement</span>
+          <span class="svc-tag">Plan d'action</span>
+          <span class="svc-tag">Recommandations</span>
+        </div>
+        <a href="tarifs.html#consultance" class="btn btn-ghost reveal d4" style="margin-top:1.4rem;">Voir les tarifs <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="svc-block" id="branding">
+      <div class="svc-visual reveal"><span class="star">✦</span><img src="assets/svc-branding.jpg" alt="Moodboard et identité visuelle" /></div>
+      <div class="svc-content">
+        <p class="section-eyebrow reveal">02 — Branding</p>
+        <h2 class="reveal d1">Identité visuelle & charte graphique</h2>
+        <p class="reveal d2">Votre marque mérite une identité forte et cohérente. Nous concevons des univers visuels mémorables, logo, palette, typographie, charte, qui traduisent vos valeurs et vous rendent immédiatement reconnaissable.</p>
+        <div class="svc-tags reveal d3">
+          <span class="svc-tag">Logo</span>
+          <span class="svc-tag">Charte graphique</span>
+          <span class="svc-tag">Identité visuelle</span>
+          <span class="svc-tag">Direction artistique</span>
+        </div>
+        <a href="tarifs.html#branding" class="btn btn-ghost reveal d4" style="margin-top:1.4rem;">Voir les tarifs <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="svc-block" id="community-management">
+      <div class="svc-visual reveal"><span class="star">✦</span><img src="assets/svc-community.jpg" alt="Échange client et relation" /></div>
+      <div class="svc-content">
+        <p class="section-eyebrow reveal">03 — Community Management</p>
+        <h2 class="reveal d1">Gestion des réseaux & création de contenu</h2>
+        <p class="reveal d2">Nous donnons vie à votre présence sociale : ligne éditoriale, création de contenus, planification et animation de vos communautés. Objectif : engager votre audience et développer durablement votre visibilité.</p>
+        <div class="svc-tags reveal d3">
+          <span class="svc-tag">Réseaux sociaux</span>
+          <span class="svc-tag">Création de contenu</span>
+          <span class="svc-tag">Ligne éditoriale</span>
+          <span class="svc-tag">Community building</span>
+        </div>
+        <a href="tarifs.html#community-management" class="btn btn-ghost reveal d4" style="margin-top:1.4rem;">Voir les tarifs <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="svc-block" id="site-vitrine">
+      <div class="svc-visual reveal"><span class="star">✦</span><img src="assets/svc-site.jpg" alt="Création de site web" /></div>
+      <div class="svc-content">
+        <p class="section-eyebrow reveal">04 — Site vitrine</p>
+        <h2 class="reveal d1">Sites modernes & optimisés SEO</h2>
+        <p class="reveal d2">Nous concevons des sites modernes, esthétiques et performants, pensés pour valoriser votre image et convertir vos visiteurs. Site structuré, optimisé et aligné avec votre positionnement, pour soutenir durablement votre développement.</p>
+        <div class="svc-tags reveal d3">
+          <span class="svc-tag">Site vitrine</span>
+          <span class="svc-tag">SEO</span>
+          <span class="svc-tag">Responsive design</span>
+          <span class="svc-tag">Performance</span>
+        </div>
+        <a href="tarifs.html#site-vitrine" class="btn btn-ghost reveal d4" style="margin-top:1.4rem;">Voir les tarifs <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="svc-block" id="ecommerce">
+      <div class="svc-visual reveal"><span class="star">✦</span><img src="assets/svc-ecommerce.jpg" alt="E-commerce et fiches produits" /></div>
+      <div class="svc-content">
+        <p class="section-eyebrow reveal">05 — E-commerce</p>
+        <h2 class="reveal d1">Plateformes & fiches produits</h2>
+        <p class="reveal d2">Déploiement de votre activité sur les plateformes e-commerce (Amazon, Bol…) et optimisation complète de vos fiches produits. Nous structurons votre présence pour améliorer votre référencement, votre crédibilité et votre performance commerciale.</p>
+        <div class="svc-tags reveal d3">
+          <span class="svc-tag">Amazon</span>
+          <span class="svc-tag">Bol.com</span>
+          <span class="svc-tag">Fiches produits</span>
+          <span class="svc-tag">Marketplaces</span>
+        </div>
+        <a href="tarifs.html#ecommerce" class="btn btn-ghost reveal d4" style="margin-top:1.4rem;">Voir les tarifs <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="svc-block" id="pack">
+      <div class="svc-visual reveal"><span class="star">✦</span><img src="assets/svc-pack.jpg" alt="Pack lancement digital" /></div>
+      <div class="svc-content">
+        <p class="section-eyebrow reveal">06 — Pack</p>
+        <h2 class="reveal d1">Lancement clé en main</h2>
+        <p class="reveal d2">Une solution complète réunissant stratégie, identité visuelle, site web et présence social media pour démarrer votre activité sur des bases solides. Un accompagnement structuré pour vous lancer sereinement, avec une vision cohérente.</p>
+        <div class="svc-tags reveal d3">
+          <span class="svc-tag">Stratégie</span>
+          <span class="svc-tag">Identité visuelle</span>
+          <span class="svc-tag">Site web</span>
+          <span class="svc-tag">Social media</span>
+        </div>
+        <a href="tarifs.html#pack" class="btn btn-ghost reveal d4" style="margin-top:1.4rem;">Voir les tarifs <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="process">
+  <div class="wrap" style="text-align:center;">
+    <p class="section-eyebrow reveal">Notre méthode</p>
+    <h2 class="section-title reveal d1">Comment nous travaillons</h2>
+    <div class="process-grid">
+      <div class="process-step reveal"><div class="pn">1</div><h4>Écoute</h4><p>Nous comprenons vos besoins, vos objectifs et votre univers.</p></div>
+      <div class="process-step reveal d1"><div class="pn">2</div><h4>Stratégie</h4><p>Nous définissons un plan clair et adapté à votre réalité.</p></div>
+      <div class="process-step reveal d2"><div class="pn">3</div><h4>Création</h4><p>Nous concevons et produisons avec soin et créativité.</p></div>
+      <div class="process-step reveal d3"><div class="pn">4</div><h4>Suivi</h4><p>Nous mesurons, ajustons et avançons à vos côtés.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" style="text-align:center; background: radial-gradient(circle at 50% 0%, rgba(216,193,188,0.25), transparent 60%);">
+  <div class="wrap">
+    <h2 class="section-title reveal">Un projet en tête ?</h2>
+    <p class="reveal d1" style="max-width:560px; margin:0 auto 2rem; font-size:1.1rem;">Parlons-en. Nous vous répondons sous 48 h avec une première piste concrète.</p>
+    <a href="contact.html" class="btn btn-primary reveal d2">Demander un devis <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <img src="assets/symbol-sable-t.png" alt="MoonFlow Agency" />
+        <p>Stratégie digitale, contenus, identité visuelle et optimisation SEO. Nous accompagnons les marques avec fluidité et sens esthétique.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="index.html">Accueil</a><a href="services.html">Services</a>
+          <a href="realisations.html">Réalisations</a><a href="tarifs.html">Tarifs</a><a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="mailto:Hello@moonflowagency.com">Hello@moonflowagency.com</a>
+          <a href="tel:+32473269456">+32 473 26 94 56</a>
+          <span style="opacity:0.7;">Réponse sous 48h</span>
+        </div>
+        <h4 style="margin-top:1.8rem;">Retrouvez-nous</h4>
+        <div class="footer-social">
+          <a href="https://fr.malt.be/profile/opheliepierre1" target="_blank" rel="noopener" class="social-chip">Malt <span>↗</span></a>
+          <a href="https://comeup.com/fr/@moonflow-agency" target="_blank" rel="noopener" class="social-chip">ComeUp <span>↗</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MoonFlow Agency — Tous droits réservés · <a href="https://www.freepik.com" target="_blank" rel="noopener" style="opacity:0.85;">Visuels : Freepik</a></span>
+      <div class="legal"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Politique de confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

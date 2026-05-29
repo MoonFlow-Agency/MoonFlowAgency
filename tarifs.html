@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tarifs — MoonFlow Agency</title>
+<meta name="description" content="Découvrez les tarifs de MoonFlow Agency : consultance, branding, community management, sites web, e-commerce et packs lancement. Tarifs à partir de 260€." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<style>
+.tarif-intro { text-align: center; max-width: 680px; margin: 0 auto 3rem; }
+.tarif-intro p { font-size: 1.08rem; }
+
+.tarif-section { padding: clamp(2rem,5vw,4rem) 0; border-bottom: 1px solid rgba(142,165,154,0.18); scroll-margin-top: 100px; }
+.tarif-section:last-child { border-bottom: none; }
+.tarif-head { text-align: center; margin-bottom: 2.5rem; }
+.tarif-head .eyebrow { font-size: 0.82rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--eucalyptus); font-weight: 600; margin-bottom: 0.8rem; }
+.tarif-head h2 { font-size: clamp(1.7rem, 3.8vw, 2.4rem); margin-bottom: 0.6rem; }
+.tarif-head p.subtitle { max-width: 600px; margin: 0 auto; font-size: 1rem; }
+
+.tarif-grid { display: grid; gap: 1.4rem; }
+.tarif-grid.cols-2 { grid-template-columns: repeat(2, 1fr); max-width: 780px; margin: 0 auto; }
+.tarif-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+.tarif-card {
+  background: var(--blanc); border: 1.5px solid rgba(142,165,154,0.22); border-radius: var(--radius);
+  padding: 2rem 1.8rem; display: flex; flex-direction: column;
+  transition: var(--transition); position: relative; overflow: hidden;
+}
+.tarif-card:hover { transform: translateY(-4px); border-color: var(--eucalyptus); box-shadow: 0 30px 60px -35px rgba(63,87,71,0.3); }
+.tarif-card .formule {
+  font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sauge); font-weight: 700;
+  padding-bottom: 1rem; margin-bottom: 1.2rem; border-bottom: 1px solid rgba(142,165,154,0.25);
+}
+.tarif-card ul { list-style: none; flex: 1; margin-bottom: 1.5rem; }
+.tarif-card li { font-size: 0.96rem; padding-left: 1.3rem; position: relative; margin-bottom: 0.6rem; line-height: 1.5; }
+.tarif-card li::before { content: "✦"; position: absolute; left: 0; top: 0.1rem; color: var(--eucalyptus); font-size: 0.8rem; }
+.tarif-card .price {
+  font-size: 1.55rem; font-weight: 700; color: var(--sauge); letter-spacing: -0.01em;
+  padding-top: 1rem; border-top: 1px solid rgba(142,165,154,0.25);
+}
+.tarif-card .price small { font-size: 0.78rem; font-weight: 500; opacity: 0.7; margin-right: 0.3rem; }
+.tarif-card .price.devis { font-size: 1.1rem; color: var(--eucalyptus); font-style: italic; font-weight: 600; }
+
+.tarif-card.featured { border-color: var(--eucalyptus); background: linear-gradient(180deg, rgba(142,165,154,0.06), var(--blanc)); }
+.tarif-card.featured::after {
+  content: "Recommandé"; position: absolute; top: 1rem; right: 1rem;
+  font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700;
+  background: var(--eucalyptus); color: var(--blanc); padding: 0.3rem 0.7rem; border-radius: 999px;
+}
+
+.options-band { background: var(--beige); padding: clamp(2.5rem,5vw,4rem) 0; margin-top: 2rem; border-radius: var(--radius); }
+.options-band h3 { font-size: 1.4rem; text-align: center; margin-bottom: 0.5rem; }
+.options-band p.sub { text-align: center; font-size: 0.95rem; max-width: 600px; margin: 0 auto 2rem; }
+.options-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; max-width: 780px; margin: 0 auto; }
+.options-list .chip { background: var(--blanc); border: 1px solid rgba(142,165,154,0.3); padding: 0.6rem 1.1rem; border-radius: 999px; font-size: 0.92rem; font-weight: 500; color: var(--sauge); }
+
+.tarif-note { text-align: center; background: linear-gradient(135deg, rgba(216,193,188,0.18), rgba(142,165,154,0.12)); border-radius: var(--radius); padding: 2.4rem 2rem; max-width: 760px; margin: 3rem auto 0; }
+.tarif-note h3 { font-size: 1.3rem; margin-bottom: 0.8rem; }
+.tarif-note p { margin-bottom: 1.5rem; }
+
+@media (max-width: 860px){
+  .tarif-grid.cols-2, .tarif-grid.cols-3 { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo"><img src="assets/symbol-eucalyptus-t.png" alt="" /><span>MoonFlow<br>Agency</span></a>
+  <nav class="nav">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="tarifs.html" class="active">Tarifs</a>
+    <a href="realisations.html">Réalisations</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="padding:0.7rem 1.4rem;">Demander un devis</a>
+  </nav>
+  <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<section class="page-hero">
+  <p class="eyebrow reveal">Tarifs 2026</p>
+  <h1 class="reveal d1">Des prix transparents,<br>des projets personnalisés</h1>
+  <p class="reveal d2">Les tarifs indiqués constituent une base. Chaque projet fait l'objet d'une analyse personnalisée et d'un devis adapté à vos besoins.</p>
+</section>
+
+<section style="padding-top:1rem;">
+  <div class="wrap">
+
+    <div class="tarif-section" id="consultance">
+      <div class="tarif-head reveal">
+        <p class="eyebrow">01 — Consultance</p>
+        <h2>Audit, recommandations & stratégie</h2>
+        <p class="subtitle">Avant d'agir, nous analysons. Choisissez le niveau d'accompagnement adapté à votre stade.</p>
+      </div>
+      <div class="tarif-grid cols-2">
+        <div class="tarif-card reveal">
+          <div class="formule">Basique</div>
+          <ul>
+            <li>Audit + recommandations</li>
+            <li>Visio + compte rendu PDF</li>
+          </ul>
+          <div class="price"><small>à partir de</small>450€</div>
+        </div>
+        <div class="tarif-card featured reveal d1">
+          <div class="formule">Avancé</div>
+          <ul>
+            <li>Audit approfondi</li>
+            <li>Proposition stratégie</li>
+            <li>Plan d'action</li>
+          </ul>
+          <div class="price"><small>à partir de</small>750€</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarif-section" id="branding">
+      <div class="tarif-head reveal">
+        <p class="eyebrow">02 — Branding & contenu de marque</p>
+        <h2>Identité visuelle & supports créatifs</h2>
+        <p class="subtitle">Chaque marque est unique : nos prestations branding sont étudiées et tarifées sur devis personnalisé.</p>
+      </div>
+      <div class="tarif-grid cols-3">
+        <div class="tarif-card reveal">
+          <div class="formule">Charte</div>
+          <ul>
+            <li>Charte graphique basique ou complète</li>
+          </ul>
+          <div class="price devis">Sur devis</div>
+        </div>
+        <div class="tarif-card reveal d1">
+          <div class="formule">Visuel</div>
+          <ul>
+            <li>Visuel adapté en 3 formats différents</li>
+          </ul>
+          <div class="price devis">Sur devis</div>
+        </div>
+        <div class="tarif-card reveal d2">
+          <div class="formule">Contenu</div>
+          <ul>
+            <li>Texte adapté pour article de blog, newsletter et post</li>
+          </ul>
+          <div class="price devis">Sur devis</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarif-section" id="community-management">
+      <div class="tarif-head reveal">
+        <p class="eyebrow">03 — Community Management</p>
+        <h2>Gestion des réseaux sociaux</h2>
+        <p class="subtitle">Une présence régulière, qualitative et alignée avec votre image, à la fréquence qui vous correspond.</p>
+      </div>
+      <div class="tarif-grid cols-3">
+        <div class="tarif-card reveal">
+          <div class="formule">Basique</div>
+          <ul>
+            <li>1 réseau social</li>
+            <li>1 post par semaine + visuels</li>
+          </ul>
+          <div class="price"><small>à partir de</small>260€</div>
+        </div>
+        <div class="tarif-card featured reveal d1">
+          <div class="formule">Avancé</div>
+          <ul>
+            <li>2 réseaux sociaux</li>
+            <li>1 post par semaine + visuels personnalisés</li>
+            <li>Rapport mensuel</li>
+          </ul>
+          <div class="price"><small>à partir de</small>340€</div>
+        </div>
+        <div class="tarif-card reveal d2">
+          <div class="formule">Full</div>
+          <ul>
+            <li>3 réseaux sociaux</li>
+            <li>1 post et story par semaine + visuels</li>
+            <li>Interaction & engagement</li>
+          </ul>
+          <div class="price"><small>à partir de</small>550€</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarif-section" id="site-vitrine">
+      <div class="tarif-head reveal">
+        <p class="eyebrow">04 — Site vitrine</p>
+        <h2>Sites modernes & optimisés SEO</h2>
+        <p class="subtitle">Des sites pensés pour valoriser votre image et convertir vos visiteurs en clients.</p>
+      </div>
+      <div class="tarif-grid cols-3">
+        <div class="tarif-card reveal">
+          <div class="formule">Basique</div>
+          <ul>
+            <li>Site vitrine 1 à 3 pages</li>
+            <li>Design simple responsive</li>
+            <li>Intégration du contenu fourni</li>
+          </ul>
+          <div class="price"><small>à partir de</small>890€</div>
+        </div>
+        <div class="tarif-card featured reveal d1">
+          <div class="formule">Avancé</div>
+          <ul>
+            <li>Site vitrine 4 à 6 pages</li>
+            <li>Design simple + intégration</li>
+          </ul>
+          <div class="price"><small>à partir de</small>1.200€</div>
+        </div>
+        <div class="tarif-card reveal d2">
+          <div class="formule">Full</div>
+          <ul>
+            <li>Site vitrine 4 à 6 pages</li>
+            <li>Design personnalisé + intégration</li>
+          </ul>
+          <div class="price"><small>à partir de</small>1.500€</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarif-section" id="ecommerce">
+      <div class="tarif-head reveal">
+        <p class="eyebrow">05 — E-commerce</p>
+        <h2>Plateformes & fiches produits</h2>
+        <p class="subtitle">Déploiement de votre activité sur Amazon, Bol et autres marketplaces, avec optimisation complète.</p>
+      </div>
+      <div class="tarif-grid cols-3">
+        <div class="tarif-card reveal">
+          <div class="formule">Basique</div>
+          <ul>
+            <li>Création du compte</li>
+            <li>5 à 10 produits</li>
+          </ul>
+          <div class="price"><small>à partir de</small>450€</div>
+        </div>
+        <div class="tarif-card featured reveal d1">
+          <div class="formule">Avancé</div>
+          <ul>
+            <li>Création du compte</li>
+            <li>Jusqu'à 15 produits</li>
+            <li>Optimisation fiches produits</li>
+          </ul>
+          <div class="price"><small>à partir de</small>650€</div>
+        </div>
+        <div class="tarif-card reveal d2">
+          <div class="formule">Full</div>
+          <ul>
+            <li>Création du compte</li>
+            <li>Jusqu'à 20 produits</li>
+            <li>Optimisation et formation</li>
+          </ul>
+          <div class="price"><small>à partir de</small>800€</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarif-section" id="pack">
+      <div class="tarif-head reveal">
+        <p class="eyebrow">06 — Pack</p>
+        <h2>Solutions clé en main</h2>
+        <p class="subtitle">Pour démarrer ou relancer votre activité sur des bases solides, avec une vision cohérente du A à Z.</p>
+      </div>
+      <div class="tarif-grid cols-3">
+        <div class="tarif-card reveal">
+          <div class="formule">Lancement</div>
+          <ul>
+            <li>Consultance</li>
+            <li>Charte graphique</li>
+            <li>Site vitrine</li>
+          </ul>
+          <div class="price"><small>à partir de</small>950€</div>
+        </div>
+        <div class="tarif-card featured reveal d1">
+          <div class="formule">Visibilité</div>
+          <ul>
+            <li>Consultance + Charte</li>
+            <li>Site vitrine + création de contenu</li>
+            <li>Gestion d'1 réseau social</li>
+          </ul>
+          <div class="price"><small>à partir de</small>1.400€</div>
+        </div>
+        <div class="tarif-card reveal d2">
+          <div class="formule">Full</div>
+          <ul>
+            <li>Consultance + Charte</li>
+            <li>Site + SEO + Contenu</li>
+            <li>Gestion des réseaux + Rapport</li>
+          </ul>
+          <div class="price"><small>à partir de</small>1.900€</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="options-band reveal">
+      <h3>Options et services à la carte</h3>
+      <p class="sub">Pour compléter votre projet selon vos besoins spécifiques.</p>
+      <div class="options-list">
+        <span class="chip">Shooting photo & vidéo</span>
+        <span class="chip">Newsletter</span>
+        <span class="chip">Publicité Meta / ADS</span>
+        <span class="chip">Formation & Coaching</span>
+      </div>
+    </div>
+
+    <div class="tarif-note reveal">
+      <h3>Un projet en tête ?</h3>
+      <p>Ces tarifs sont indicatifs. Chaque projet est unique et fait l'objet d'un devis personnalisé après un échange pour comprendre vos besoins, vos objectifs et votre stade de développement.</p>
+      <a href="contact.html" class="btn btn-primary">Demander un devis personnalisé <span class="arrow">→</span></a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer" style="margin-top:4rem;">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <img src="assets/symbol-sable-t.png" alt="MoonFlow Agency" />
+        <p>Stratégie digitale, contenus, identité visuelle et optimisation SEO. Nous accompagnons les marques avec fluidité et sens esthétique.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="index.html">Accueil</a><a href="services.html">Services</a>
+          <a href="realisations.html">Réalisations</a><a href="tarifs.html">Tarifs</a><a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="mailto:Hello@moonflowagency.com">Hello@moonflowagency.com</a>
+          <a href="tel:+32473269456">+32 473 26 94 56</a>
+          <span style="opacity:0.7;">Réponse sous 48h</span>
+        </div>
+        <h4 style="margin-top:1.8rem;">Retrouvez-nous</h4>
+        <div class="footer-social">
+          <a href="https://fr.malt.be/profile/opheliepierre1" target="_blank" rel="noopener" class="social-chip">Malt <span>↗</span></a>
+          <a href="https://comeup.com/fr/@moonflow-agency" target="_blank" rel="noopener" class="social-chip">ComeUp <span>↗</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MoonFlow Agency — Tous droits réservés · <a href="https://www.freepik.com" target="_blank" rel="noopener" style="opacity:0.85;">Visuels : Freepik</a></span>
+      <div class="legal"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Politique de confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

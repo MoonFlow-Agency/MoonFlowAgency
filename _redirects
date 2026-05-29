@@ -1,0 +1,38 @@
+# =========================================================================
+# Fichier de redirections pour Netlify
+# Documentation : https://docs.netlify.com/routing/redirects/
+#
+# Format : ANCIENNE-URL  NOUVELLE-URL  CODE_HTTP
+# 301 = redirection permanente (SEO friendly, transfert d'autorité)
+# =========================================================================
+
+# ---------- Pages principales : trailing slash WordPress -> nouvelles URLs ---
+/services/                           /services.html             301
+/realisations/                       /realisations.html         301
+/contact/                            /contact.html              301
+
+# ---------- Catégorie blog WordPress -> nouvelle page blog ------------------
+/category/marketing-freelance/       /blog.html                 301
+/category/marketing-freelance        /blog.html                 301
+
+# ---------- Articles : on garde les anciennes URLs WP (qui pointent vers
+# les nouvelles versions HTML dans la même structure de dossier).
+# Netlify sert automatiquement /2026/05/21/visio.../index.html quand
+# la requête est /2026/05/21/visio.../, donc rien à faire ici.
+
+# ---------- Ancienne page /about/ : pointe vers Services (page qui n'existait pas mais qui était liée) ---
+/about/                              /services.html             301
+/about                               /services.html             301
+
+# ---------- Anciens PDFs hébergés sur WordPress -> nouvelles pages HTML ------
+/wp-content/uploads/2026/03/Mentions-legales.pdf            /mentions-legales.html              301
+/wp-content/uploads/2026/03/Politique-de-confidentialite.pdf /politique-confidentialite.html    301
+/wp-content/uploads/2026/03/MoonFlow-Tarif-2026.pdf         /tarifs.html                        301
+
+# ---------- Anciens uploads WP : si quelqu'un a partagé un lien direct,
+# on redirige vers l'accueil plutôt que 404 (filet de sécurité) ---------------
+/wp-content/*                        /                          301
+/wp-admin/*                          /                          301
+/wp-includes/*                       /                          301
+/feed/                               /blog.html                 301
+/feed                                /blog.html                 301

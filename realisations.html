@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Réalisations — MoonFlow Agency</title>
+<meta name="description" content="Découvrez les projets et collaborations de MoonFlow Agency." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<style>
+.proj-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.6rem; }
+.proj-card { border-radius: var(--radius); overflow: hidden; background: var(--beige); aspect-ratio: 4/3; position: relative; display: flex; align-items: flex-end; padding: 2rem; transition: var(--transition); }
+.proj-card::before { content:""; position:absolute; inset:0; background: linear-gradient(135deg, var(--eucalyptus), var(--sauge)); opacity: 0.9; transition: var(--transition); }
+.proj-card:nth-child(2)::before { background: linear-gradient(135deg, var(--nude), var(--eucalyptus)); }
+.proj-card:nth-child(3)::before { background: linear-gradient(135deg, var(--sauge), var(--eucalyptus)); }
+.proj-card:hover { transform: translateY(-6px); }
+.proj-card .meta { position: relative; z-index: 1; color: var(--blanc); }
+.proj-card .meta .cat { font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.9; }
+.proj-card .meta h3 { color: var(--blanc); font-size: 1.4rem; margin-top: 0.3rem; }
+
+/* Etat "à venir" sobre */
+.coming { text-align: center; max-width: 640px; margin: 0 auto; }
+.coming .badge { display:inline-block; background: var(--beige); color: var(--sauge); font-size:0.78rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; padding:0.5rem 1.1rem; border-radius:999px; margin-bottom:1.5rem; }
+.coming h2 { font-size: clamp(1.8rem,4vw,2.6rem); margin-bottom: 1rem; }
+.coming p { font-size: 1.08rem; margin-bottom: 2rem; }
+
+.logos-row { display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-top:3rem; opacity:0.55; }
+.logo-chip { width:120px; height:60px; border:1.5px dashed var(--eucalyptus); border-radius:12px; display:flex; align-items:center; justify-content:center; color:var(--eucalyptus); font-size:0.8rem; }
+
+@media (max-width: 860px){ .proj-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo"><img src="assets/symbol-eucalyptus-t.png" alt="" /><span>MoonFlow<br>Agency</span></a>
+  <nav class="nav">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="realisations.html" class="active">Réalisations</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="padding:0.7rem 1.4rem;">Demander un devis</a>
+  </nav>
+  <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<section class="page-hero">
+  <p class="eyebrow reveal">Réalisations</p>
+  <h1 class="reveal d1">Nos projets & collaborations</h1>
+  <p class="reveal d2">Un aperçu des marques que nous accompagnons. De nouveaux projets viennent régulièrement enrichir cette sélection.</p>
+</section>
+
+<section style="padding-top:1rem;">
+  <div class="wrap coming">
+    <span class="badge reveal">Bientôt en ligne</span>
+    <h2 class="reveal d1">Nos études de cas arrivent</h2>
+    <p class="reveal d2">Nous préparons une sélection de projets pour vous montrer concrètement notre travail : stratégie, branding, contenu et sites web. En attendant, n'hésitez pas à nous contacter pour découvrir nos références.</p>
+    <a href="contact.html" class="btn btn-primary reveal d3">Demander à voir nos références <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!--
+  ZONE PRÊTE POUR TES FUTURS PROJETS
+  Quand tu auras des réalisations, on remplacera la section ci-dessus par cette grille.
+  Exemple de structure (actuellement masquée) :
+-->
+<section style="display:none;">
+  <div class="wrap">
+    <div class="proj-grid">
+      <a href="#" class="proj-card"><div class="meta"><span class="cat">Branding · Site web</span><h3>Nom du projet</h3></div></a>
+      <a href="#" class="proj-card"><div class="meta"><span class="cat">Community Management</span><h3>Nom du projet</h3></div></a>
+      <a href="#" class="proj-card"><div class="meta"><span class="cat">E-commerce</span><h3>Nom du projet</h3></div></a>
+      <a href="#" class="proj-card"><div class="meta"><span class="cat">Consultance</span><h3>Nom du projet</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" style="text-align:center; background: radial-gradient(circle at 50% 0%, rgba(216,193,188,0.25), transparent 60%);">
+  <div class="wrap">
+    <h2 class="section-title reveal">Envie d'être notre prochaine réussite ?</h2>
+    <p class="reveal d1" style="max-width:560px;margin:0 auto 2rem;font-size:1.1rem;">Confiez-nous votre projet et construisons ensemble une présence digitale qui marque les esprits.</p>
+    <a href="contact.html" class="btn btn-primary reveal d2">Demander un devis <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <img src="assets/symbol-sable-t.png" alt="MoonFlow Agency" />
+        <p>Stratégie digitale, contenus, identité visuelle et optimisation SEO. Nous accompagnons les marques avec fluidité et sens esthétique.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="index.html">Accueil</a><a href="services.html">Services</a>
+          <a href="realisations.html">Réalisations</a><a href="tarifs.html">Tarifs</a><a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="mailto:Hello@moonflowagency.com">Hello@moonflowagency.com</a>
+          <a href="tel:+32473269456">+32 473 26 94 56</a>
+          <span style="opacity:0.7;">Réponse sous 48h</span>
+        </div>
+        <h4 style="margin-top:1.8rem;">Retrouvez-nous</h4>
+        <div class="footer-social">
+          <a href="https://fr.malt.be/profile/opheliepierre1" target="_blank" rel="noopener" class="social-chip">Malt <span>↗</span></a>
+          <a href="https://comeup.com/fr/@moonflow-agency" target="_blank" rel="noopener" class="social-chip">ComeUp <span>↗</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MoonFlow Agency — Tous droits réservés · <a href="https://www.freepik.com" target="_blank" rel="noopener" style="opacity:0.85;">Visuels : Freepik</a></span>
+      <div class="legal"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Politique de confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

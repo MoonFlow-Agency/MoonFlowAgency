@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — MoonFlow Agency</title>
+<meta name="description" content="Contactez MoonFlow Agency pour discuter de votre projet digital. Réponse sous 48h." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<style>
+.contact-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 3.5rem; align-items: start; }
+.contact-info h2 { font-size: clamp(1.8rem,4vw,2.6rem); margin-bottom: 1rem; }
+.contact-info > p { font-size: 1.05rem; margin-bottom: 2.5rem; }
+.info-item { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.6rem; }
+.info-item .ic { width: 46px; height: 46px; border-radius: 12px; background: var(--beige); color: var(--sauge); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem; }
+.info-item .t { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eucalyptus); font-weight: 600; }
+.info-item .v { font-weight: 500; color: var(--sauge); font-size: 1.05rem; }
+.info-item .v a:hover { color: var(--eucalyptus); }
+
+.form-card { background: var(--blanc); border: 1px solid rgba(142,165,154,0.25); border-radius: var(--radius); padding: clamp(1.8rem, 4vw, 2.8rem); box-shadow: 0 30px 70px -45px rgba(63,87,71,0.4); }
+.field { margin-bottom: 1.3rem; }
+.field label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--sauge); margin-bottom: 0.5rem; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 0.9rem 1.1rem; border: 1.5px solid rgba(142,165,154,0.4);
+  border-radius: 12px; font-family: var(--font); font-size: 0.97rem; color: var(--noir);
+  background: #fff; transition: var(--transition);
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--eucalyptus); box-shadow: 0 0 0 3px rgba(142,165,154,0.15); }
+.field textarea { resize: vertical; min-height: 130px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem; }
+.form-card .btn { width: 100%; justify-content: center; margin-top: 0.5rem; }
+.form-note { font-size: 0.82rem; opacity: 0.7; margin-top: 1rem; text-align: center; }
+.success { display:none; background: var(--eucalyptus); color:#fff; padding:1rem 1.2rem; border-radius:12px; margin-bottom:1.3rem; font-size:0.95rem; }
+.success.show { display:block; }
+
+@media (max-width: 860px){
+  .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo"><img src="assets/symbol-eucalyptus-t.png" alt="" /><span>MoonFlow<br>Agency</span></a>
+  <nav class="nav">
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="tarifs.html">Tarifs</a>
+    <a href="realisations.html">Réalisations</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="padding:0.7rem 1.4rem;">Demander un devis</a>
+  </nav>
+  <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<section class="page-hero">
+  <p class="eyebrow reveal">Contact</p>
+  <h1 class="reveal d1">Parlons de votre projet</h1>
+  <p class="reveal d2">Une question, une idée, un projet ? Écrivez-nous : nous vous répondons sous 48 heures.</p>
+</section>
+
+<section style="padding-top:1rem;">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <p class="section-eyebrow reveal">Restons en contact</p>
+      <h2 class="reveal d1">Une réponse sous 48h, toujours</h2>
+      <p class="reveal d2">Que vous soyez au tout début de votre réflexion ou prêt à lancer votre projet, nous commençons par une conversation simple pour comprendre vos besoins.</p>
+
+      <div class="info-item reveal d2">
+        <div class="ic">✉</div>
+        <div><div class="t">E-mail</div><div class="v"><a href="mailto:Hello@moonflowagency.com">Hello@moonflowagency.com</a></div></div>
+      </div>
+      <div class="info-item reveal d3">
+        <div class="ic">☎</div>
+        <div><div class="t">Téléphone</div><div class="v"><a href="tel:+32473269456">+32 473 26 94 56</a></div></div>
+      </div>
+      <div class="info-item reveal d4">
+        <div class="ic">✦</div>
+        <div><div class="t">Délai de réponse</div><div class="v">Sous 48 heures ouvrées</div></div>
+      </div>
+    </div>
+
+    <div class="form-card reveal d1">
+      <div class="success" id="success">Merci ! Votre message a bien été pris en compte. Nous revenons vers vous sous 48h.</div>
+      <div class="field">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required />
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="vous@exemple.com" required />
+        </div>
+        <div class="field">
+          <label for="phone">Téléphone <span style="opacity:0.5;font-weight:400;">(optionnel)</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="+32 ..." />
+        </div>
+      </div>
+      <div class="field">
+        <label for="service">Votre besoin</label>
+        <select id="service" name="service">
+          <option value="">Sélectionnez…</option>
+          <option>Consultance & stratégie</option>
+          <option>Branding & identité visuelle</option>
+          <option>Community management</option>
+          <option>Site web / E-commerce</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" placeholder="Parlez-nous de votre projet…" required></textarea>
+      </div>
+      <button class="btn btn-primary" id="submitBtn">Envoyer ma demande <span class="arrow">→</span></button>
+      <p class="form-note">En envoyant ce formulaire, vous acceptez d'être recontacté par MoonFlow Agency.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" style="margin-top:4rem;">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <img src="assets/symbol-sable-t.png" alt="MoonFlow Agency" />
+        <p>Stratégie digitale, contenus, identité visuelle et optimisation SEO. Nous accompagnons les marques avec fluidité et sens esthétique.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="index.html">Accueil</a><a href="services.html">Services</a>
+          <a href="realisations.html">Réalisations</a><a href="tarifs.html">Tarifs</a><a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="mailto:Hello@moonflowagency.com">Hello@moonflowagency.com</a>
+          <a href="tel:+32473269456">+32 473 26 94 56</a>
+          <span style="opacity:0.7;">Réponse sous 48h</span>
+        </div>
+        <h4 style="margin-top:1.8rem;">Retrouvez-nous</h4>
+        <div class="footer-social">
+          <a href="https://fr.malt.be/profile/opheliepierre1" target="_blank" rel="noopener" class="social-chip">Malt <span>↗</span></a>
+          <a href="https://comeup.com/fr/@moonflow-agency" target="_blank" rel="noopener" class="social-chip">ComeUp <span>↗</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MoonFlow Agency — Tous droits réservés · <a href="https://www.freepik.com" target="_blank" rel="noopener" style="opacity:0.85;">Visuels : Freepik</a></span>
+      <div class="legal"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Politique de confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// Démo : feedback visuel (à brancher sur un vrai service d'envoi côté WordPress)
+document.getElementById("submitBtn").addEventListener("click", () => {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const msg = document.getElementById("message").value.trim();
+  if (!name || !email || !msg) { alert("Merci de remplir les champs obligatoires."); return; }
+  document.getElementById("success").classList.add("show");
+  window.scrollTo({ top: document.querySelector(".form-card").offsetTop - 120, behavior: "smooth" });
+});
+</script>
+</body>
+</html>
