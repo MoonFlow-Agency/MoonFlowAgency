@@ -1,0 +1,8 @@
+# robots.txt pour moonflowagency.com
+# Documentation : https://developers.google.com/search/docs/crawling-indexing/robots/intro
+
+User-agent: *
+Allow: /
+
+# Emplacement de la sitemap
+Sitemap: https://moonflowagency.com/sitemap.xml
