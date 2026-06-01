@@ -83,40 +83,94 @@
       </div>
     </div>
 
-    <div class="form-card reveal d1">
-      <div class="success" id="success">Merci ! Votre message a bien été pris en compte. Nous revenons vers vous sous 48h.</div>
-      <div class="field">
-        <label for="name">Nom complet</label>
-        <input type="text" id="name" name="name" placeholder="Votre nom" required />
-      </div>
-      <div class="field-row">
-        <div class="field">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="vous@exemple.com" required />
-        </div>
-        <div class="field">
-          <label for="phone">Téléphone <span style="opacity:0.5;font-weight:400;">(optionnel)</span></label>
-          <input type="tel" id="phone" name="phone" placeholder="+32 ..." />
-        </div>
-      </div>
-      <div class="field">
-        <label for="service">Votre besoin</label>
-        <select id="service" name="service">
-          <option value="">Sélectionnez…</option>
-          <option>Consultance & stratégie</option>
-          <option>Branding & identité visuelle</option>
-          <option>Community management</option>
-          <option>Site web / E-commerce</option>
-          <option>Autre</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="message">Votre message</label>
-        <textarea id="message" name="message" placeholder="Parlez-nous de votre projet…" required></textarea>
-      </div>
-      <button class="btn btn-primary" id="submitBtn">Envoyer ma demande <span class="arrow">→</span></button>
-      <p class="form-note">En envoyant ce formulaire, vous acceptez d'être recontacté par MoonFlow Agency.</p>
+   <form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  class="form-card reveal d1"
+>
+  <input type="hidden" name="form-name" value="contact">
+
+  <p hidden>
+    <label>
+      Ne pas remplir :
+      <input name="bot-field">
+    </label>
+  </p>
+
+  <div class="success" id="success">
+    Merci ! Votre message a bien été pris en compte. Nous revenons vers vous sous 48h.
+  </div>
+
+  <div class="field">
+    <label for="name">Nom complet</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Votre nom"
+      required
+    />
+  </div>
+
+  <div class="field-row">
+    <div class="field">
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="vous@exemple.com"
+        required
+      />
     </div>
+
+    <div class="field">
+      <label for="phone">
+        Téléphone
+        <span style="opacity:0.5;font-weight:400;">(optionnel)</span>
+      </label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="+32 ..."
+      />
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="service">Votre besoin</label>
+    <select id="service" name="service">
+      <option value="">Sélectionnez…</option>
+      <option>Consultance & stratégie</option>
+      <option>Branding & identité visuelle</option>
+      <option>Community management</option>
+      <option>Site web / E-commerce</option>
+      <option>Autre</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="message">Votre message</label>
+    <textarea
+      id="message"
+      name="message"
+      placeholder="Parlez-nous de votre projet…"
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    Envoyer ma demande <span class="arrow">→</span>
+  </button>
+
+  <p class="form-note">
+    En envoyant ce formulaire, vous acceptez d'être recontacté par MoonFlow Agency.
+  </p>
+</form>
+
   </div>
 </section>
 
@@ -157,16 +211,5 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script>
-// Démo : feedback visuel (à brancher sur un vrai service d'envoi côté WordPress)
-document.getElementById("submitBtn").addEventListener("click", () => {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const msg = document.getElementById("message").value.trim();
-  if (!name || !email || !msg) { alert("Merci de remplir les champs obligatoires."); return; }
-  document.getElementById("success").classList.add("show");
-  window.scrollTo({ top: document.querySelector(".form-card").offsetTop - 120, behavior: "smooth" });
-});
-</script>
 </body>
 </html>
