@@ -88,6 +88,7 @@
   method="POST"
   data-netlify="true"
   data-netlify-honeypot="bot-field"
+  action="/contact.html?success=true"
   class="form-card reveal d1"
 >
   <input type="hidden" name="form-name" value="contact">
@@ -211,5 +212,12 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+<script>
+if (window.location.search.includes('success=true')) {
+  document.getElementById('success').classList.add('show');
+}
+</script>
+
 </body>
 </html>
