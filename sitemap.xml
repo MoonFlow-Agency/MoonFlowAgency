@@ -36,9 +36,15 @@
   <!-- Blog -->
   <url>
     <loc>https://moonflowagency.com/blog.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://moonflowagency.com/2026/07/30/visuels-ia-tous-pareils/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://moonflowagency.com/2026/05/21/visio-prospect-premier-contact/</loc>
