@@ -4,39 +4,39 @@
   <!-- Pages principales -->
   <url>
     <loc>https://moonflowagency.com/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://moonflowagency.com/services.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://moonflowagency.com/services</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://moonflowagency.com/tarifs.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://moonflowagency.com/tarifs</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://moonflowagency.com/realisations.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://moonflowagency.com/realisations</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://moonflowagency.com/contact.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://moonflowagency.com/contact</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog -->
   <url>
-    <loc>https://moonflowagency.com/blog.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://moonflowagency.com/blog</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -61,14 +61,14 @@
 
   <!-- Pages légales -->
   <url>
-    <loc>https://moonflowagency.com/mentions-legales.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://moonflowagency.com/mentions-legales</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://moonflowagency.com/politique-confidentialite.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://moonflowagency.com/politique-confidentialite</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
