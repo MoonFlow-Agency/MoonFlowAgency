@@ -127,7 +127,7 @@ section { padding: clamp(3.5rem, 8vw, 7rem) 0; }
 .site-footer { background: var(--sauge); color: var(--beige); padding: 4.5rem 0 2rem; }
 .site-footer a { color: var(--beige); opacity: 0.85; transition: opacity var(--transition); }
 .site-footer a:hover { opacity: 1; }
-.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+.footer-grid { display: grid; grid-template-columns: 1.3fr 0.8fr 1.3fr; gap: 3rem; margin-bottom: 3rem; }
 .site-footer h4 { color: var(--beige); font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1.2rem; font-weight: 700; }
 .site-footer .f-brand img { height: 64px; margin-bottom: 1.2rem; }
 .site-footer .f-brand p { opacity: 0.8; max-width: 320px; font-size: 0.95rem; }
@@ -140,6 +140,15 @@ section { padding: clamp(3.5rem, 8vw, 7rem) 0; }
   padding: 0.5rem 1rem; border-radius: 999px; opacity: 1;
   transition: var(--transition);
 }
+.footer-social { align-items: center; gap: 0.5rem; }
+.footer-social .social-chip { height: 38px; padding: 0 0.95rem; }
+.footer-social .social-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 50%;
+  background: rgba(229,226,221,0.12); border: 1px solid rgba(229,226,221,0.25);
+  color: var(--beige); transition: var(--transition);
+}
+.footer-social .social-icon:hover { background: var(--eucalyptus); border-color: var(--eucalyptus); transform: translateY(-2px); }
 .footer-social .social-chip span { font-size: 0.8rem; opacity: 0.8; }
 .footer-social .social-chip:hover { background: var(--eucalyptus); border-color: var(--eucalyptus); transform: translateY(-2px); }
 .footer-bottom {

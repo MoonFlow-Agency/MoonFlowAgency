@@ -78,9 +78,9 @@
 
 .gallery { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
 .gallery figure { margin:0; }
-.gallery a { display:block; border-radius:14px; overflow:hidden; background:var(--beige); box-shadow:0 20px 40px -30px rgba(63,87,71,0.5); }
+.gallery .g-img { display:block; border-radius:14px; overflow:hidden; background:var(--beige); box-shadow:0 20px 40px -30px rgba(63,87,71,0.5); }
 .gallery img { width:100%; aspect-ratio:4/5; object-fit:cover; object-position:top; transition:transform 0.6s ease; }
-.gallery a:hover img { transform:scale(1.03); }
+.gallery .g-img:hover img { transform:scale(1.06); }
 .gallery figcaption { font-size:0.85rem; margin-top:0.7rem; }
 .gallery.wide { grid-template-columns:repeat(2,1fr); }
 .gallery.wide img { aspect-ratio:16/9; object-position:center; }
@@ -238,10 +238,10 @@
     </div>
 
     <div class="gallery">
-      <figure class="reveal"><a href="assets/realisations/tango-avant.jpg" target="_blank" rel="noopener"><img src="assets/realisations/tango-avant.jpg" alt="Ancien site de Tango aux Frontières sur mobile, menu ouvert" loading="lazy" /></a><figcaption><b>Avant</b>Un menu mobile de 34 entrées.</figcaption></figure>
-      <figure class="reveal d1"><a href="assets/realisations/tango-accueil.jpg" target="_blank" rel="noopener"><img src="assets/realisations/tango-accueil.jpg" alt="Nouvelle page d'accueil de Tango aux Frontières" loading="lazy" /></a><figcaption><b>Accueil</b>Une promesse claire et l'agenda en un clic.</figcaption></figure>
-      <figure class="reveal d2"><a href="assets/realisations/tango-agenda.jpg" target="_blank" rel="noopener"><img src="assets/realisations/tango-agenda.jpg" alt="Nouvelle page agenda de Tango aux Frontières" loading="lazy" /></a><figcaption><b>Agenda</b>Rendez-vous réguliers et filtres.</figcaption></figure>
-      <figure class="reveal d3"><a href="assets/realisations/tango-location.jpg" target="_blank" rel="noopener"><img src="assets/realisations/tango-location.jpg" alt="Nouvelle page location et séminaires de Tango aux Frontières" loading="lazy" /></a><figcaption><b>Location</b>La salle mise en valeur.</figcaption></figure>
+      <figure class="reveal"><div class="g-img"><img src="assets/realisations/tango-avant.jpg" alt="Ancien site de Tango aux Frontières sur mobile, menu ouvert" loading="lazy" /></div><figcaption><b>Avant</b>Un menu mobile de 34 entrées.</figcaption></figure>
+      <figure class="reveal d1"><div class="g-img"><img src="assets/realisations/tango-accueil.jpg" alt="Nouvelle page d'accueil de Tango aux Frontières" loading="lazy" /></div><figcaption><b>Accueil</b>Une promesse claire et l'agenda en un clic.</figcaption></figure>
+      <figure class="reveal d2"><div class="g-img"><img src="assets/realisations/tango-agenda.jpg" alt="Nouvelle page agenda de Tango aux Frontières" loading="lazy" /></div><figcaption><b>Agenda</b>Rendez-vous réguliers et filtres.</figcaption></figure>
+      <figure class="reveal d3"><div class="g-img"><img src="assets/realisations/tango-location.jpg" alt="Nouvelle page location et séminaires de Tango aux Frontières" loading="lazy" /></div><figcaption><b>Location</b>La salle mise en valeur.</figcaption></figure>
     </div>
 
     <div class="case-result reveal">
@@ -283,10 +283,10 @@
 
     <!-- Captures à ajouter dans assets/realisations/ (format 4:5 conseillé, ou adapter aspect-ratio) -->
     <div class="gallery">
-      <figure class="reveal"><a href="assets/realisations/site-moonflow-accueil.jpg" target="_blank" rel="noopener"><img src="assets/realisations/site-moonflow-accueil.jpg" alt="Page d'accueil du site MoonFlow Agency" loading="lazy" /></a><figcaption><b>Accueil</b>Promesse claire et appel à l'action.</figcaption></figure>
-      <figure class="reveal d1"><a href="assets/realisations/site-moonflow-services.jpg" target="_blank" rel="noopener"><img src="assets/realisations/site-moonflow-services.jpg" alt="Page services du site MoonFlow Agency" loading="lazy" /></a><figcaption><b>Services</b>Un bloc par expertise.</figcaption></figure>
-      <figure class="reveal d2"><a href="assets/realisations/site-moonflow-contact.jpg" target="_blank" rel="noopener"><img src="assets/realisations/site-moonflow-contact.jpg" alt="Page contact du site MoonFlow Agency" loading="lazy" /></a><figcaption><b>Contact</b>Formulaire court, réponse sous 48 h.</figcaption></figure>
-      <figure class="reveal d3"><a href="assets/realisations/site-moonflow-mobile.jpg" target="_blank" rel="noopener"><img src="assets/realisations/site-moonflow-mobile.jpg" alt="Version mobile du site MoonFlow Agency" loading="lazy" /></a><figcaption><b>Mobile</b>Pensé pour le téléphone.</figcaption></figure>
+      <figure class="reveal"><div class="g-img"><img src="assets/realisations/site-moonflow-accueil.jpg" alt="Page d'accueil du site MoonFlow Agency" loading="lazy" /></div><figcaption><b>Accueil</b>Promesse claire et appel à l'action.</figcaption></figure>
+      <figure class="reveal d1"><div class="g-img"><img src="assets/realisations/site-moonflow-services.jpg" alt="Page services du site MoonFlow Agency" loading="lazy" /></div><figcaption><b>Services</b>Un bloc par expertise.</figcaption></figure>
+      <figure class="reveal d2"><div class="g-img"><img src="assets/realisations/site-moonflow-contact.jpg" alt="Page contact du site MoonFlow Agency" loading="lazy" /></div><figcaption><b>Contact</b>Formulaire court, réponse sous 48 h.</figcaption></figure>
+      <figure class="reveal d3"><div class="g-img"><img src="assets/realisations/site-moonflow-mobile.jpg" alt="Version mobile du site MoonFlow Agency" loading="lazy" /></div><figcaption><b>Mobile</b>Pensé pour le téléphone.</figcaption></figure>
     </div>
 
     <div class="case-result reveal">
@@ -327,8 +327,8 @@
     </div>
 
     <div class="gallery wide">
-      <figure class="reveal"><a href="assets/realisations/audit-analyse.jpg" target="_blank" rel="noopener"><img src="assets/realisations/audit-analyse.jpg" alt="Page de l'audit consacrée au site web et au référencement" loading="lazy" /></a><figcaption><b>L'analyse</b>Site web et référencement, côte à côte.</figcaption></figure>
-      <figure class="reveal d1"><a href="assets/realisations/audit-recos.jpg" target="_blank" rel="noopener"><img src="assets/realisations/audit-recos.jpg" alt="Page des recommandations de l'audit" loading="lazy" /></a><figcaption><b>Les recommandations</b>Trois priorités, classées par effort et impact.</figcaption></figure>
+      <figure class="reveal"><div class="g-img"><img src="assets/realisations/audit-analyse.jpg" alt="Page de l'audit consacrée au site web et au référencement" loading="lazy" /></div><figcaption><b>L'analyse</b>Site web et référencement, côte à côte.</figcaption></figure>
+      <figure class="reveal d1"><div class="g-img"><img src="assets/realisations/audit-recos.jpg" alt="Page des recommandations de l'audit" loading="lazy" /></div><figcaption><b>Les recommandations</b>Trois priorités, classées par effort et impact.</figcaption></figure>
     </div>
 
     <div class="case-result reveal">
@@ -377,10 +377,10 @@
     </div>
 
     <div class="gallery">
-      <figure class="reveal"><a href="assets/realisations/prog21-avant-apres.jpg" target="_blank" rel="noopener"><img src="assets/realisations/prog21-avant-apres.jpg" alt="Visuel avant/après d'un vide-maison Pro-G21" loading="lazy" /></a><figcaption><b>Avant / après</b>Le travail réel, en une image.</figcaption></figure>
-      <figure class="reveal d1"><a href="assets/realisations/prog21-pub.jpg" target="_blank" rel="noopener"><img src="assets/realisations/prog21-pub.jpg" alt="Publicité Facebook Pro-G21" loading="lazy" /></a><figcaption><b>Publicité Facebook</b>Le gérant, interlocuteur unique.</figcaption></figure>
-      <figure class="reveal d2"><a href="assets/realisations/prog21-modele.jpg" target="_blank" rel="noopener"><img src="assets/realisations/prog21-modele.jpg" alt="Modèle de publication Pro-G21" loading="lazy" /></a><figcaption><b>Kit de modèles</b>Des publications prêtes à l'emploi.</figcaption></figure>
-      <figure class="reveal d3"><a href="assets/realisations/prog21-rapport.jpg" target="_blank" rel="noopener"><img src="assets/realisations/prog21-rapport.jpg" alt="Couverture du rapport mensuel MoonFlow pour Pro-G21" loading="lazy" /></a><figcaption><b>Rapport mensuel</b>Les résultats, expliqués simplement.</figcaption></figure>
+      <figure class="reveal"><div class="g-img"><img src="assets/realisations/prog21-avant-apres.jpg" alt="Visuel avant/après d'un vide-maison Pro-G21" loading="lazy" /></div><figcaption><b>Avant / après</b>Le travail réel, en une image.</figcaption></figure>
+      <figure class="reveal d1"><div class="g-img"><img src="assets/realisations/prog21-pub.jpg" alt="Publicité Facebook Pro-G21" loading="lazy" /></div><figcaption><b>Publicité Facebook</b>Le gérant, interlocuteur unique.</figcaption></figure>
+      <figure class="reveal d2"><div class="g-img"><img src="assets/realisations/prog21-modele.jpg" alt="Modèle de publication Pro-G21" loading="lazy" /></div><figcaption><b>Kit de modèles</b>Des publications prêtes à l'emploi.</figcaption></figure>
+      <figure class="reveal d3"><div class="g-img"><img src="assets/realisations/prog21-rapport.jpg" alt="Couverture du rapport mensuel MoonFlow pour Pro-G21" loading="lazy" /></div><figcaption><b>Rapport mensuel</b>Les résultats, expliqués simplement.</figcaption></figure>
     </div>
 
     <div class="case-result reveal">
@@ -421,10 +421,10 @@
     </div>
 
     <div class="gallery">
-      <figure class="reveal"><a href="assets/realisations/templates-rs-citation.jpg" target="_blank" rel="noopener"><img src="assets/realisations/templates-rs-citation.jpg" alt="Modèle citation sur fond beige avec surlignage rose" loading="lazy" /></a><figcaption><b>Citation</b>Messages courts qui rassurent.</figcaption></figure>
-      <figure class="reveal d1"><a href="assets/realisations/templates-rs-presentation.jpg" target="_blank" rel="noopener"><img src="assets/realisations/templates-rs-presentation.jpg" alt="Modèle présentation avec formes arrondies vert sauge" loading="lazy" /></a><figcaption><b>Présentation</b>L'offre et la méthode.</figcaption></figure>
-      <figure class="reveal d2"><a href="assets/realisations/templates-rs-photo.jpg" target="_blank" rel="noopener"><img src="assets/realisations/templates-rs-photo.jpg" alt="Modèle photo de bureau avec texte blanc aligné à gauche" loading="lazy" /></a><figcaption><b>Photo bureau</b>Contenus pédagogiques.</figcaption></figure>
-      <figure class="reveal d3"><a href="assets/realisations/templates-rs-storytelling.jpg" target="_blank" rel="noopener"><img src="assets/realisations/templates-rs-storytelling.jpg" alt="Modèle storytelling avec photo lifestyle et encadré beige" loading="lazy" /></a><figcaption><b>Storytelling</b>Retours d'expérience.</figcaption></figure>
+      <figure class="reveal"><div class="g-img"><img src="assets/realisations/templates-rs-citation.jpg" alt="Modèle citation sur fond beige avec surlignage rose" loading="lazy" /></div><figcaption><b>Citation</b>Messages courts qui rassurent.</figcaption></figure>
+      <figure class="reveal d1"><div class="g-img"><img src="assets/realisations/templates-rs-presentation.jpg" alt="Modèle présentation avec formes arrondies vert sauge" loading="lazy" /></div><figcaption><b>Présentation</b>L'offre et la méthode.</figcaption></figure>
+      <figure class="reveal d2"><div class="g-img"><img src="assets/realisations/templates-rs-photo.jpg" alt="Modèle photo de bureau avec texte blanc aligné à gauche" loading="lazy" /></div><figcaption><b>Photo bureau</b>Contenus pédagogiques.</figcaption></figure>
+      <figure class="reveal d3"><div class="g-img"><img src="assets/realisations/templates-rs-storytelling.jpg" alt="Modèle storytelling avec photo lifestyle et encadré beige" loading="lazy" /></div><figcaption><b>Storytelling</b>Retours d'expérience.</figcaption></figure>
     </div>
 
     <div class="case-result reveal">
@@ -470,9 +470,9 @@
         </div>
         <h4 style="margin-top:1.8rem;">Retrouvez-nous</h4>
         <div class="footer-social">
-          <a href="https://www.instagram.com/moonflowagency/" target="_blank" rel="noopener" class="social-chip">Instagram <span aria-hidden="true">↗</span></a>
-          <a href="https://www.facebook.com/MoonFlowAgency" target="_blank" rel="noopener" class="social-chip">Facebook <span aria-hidden="true">↗</span></a>
-          <a href="https://www.linkedin.com/company/moonflowagency" target="_blank" rel="noopener" class="social-chip">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="https://www.instagram.com/moonflowagency/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram de MoonFlow Agency"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/MoonFlowAgency" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook de MoonFlow Agency"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21h3z" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/moonflowagency" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn de MoonFlow Agency"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><rect x="3.5" y="9" width="3.6" height="11.5" fill="currentColor"/><circle cx="5.3" cy="5.3" r="2.1" fill="currentColor"/><path d="M10 9h3.4v1.6c.5-.9 1.7-1.9 3.6-1.9 3.6 0 4.3 2.3 4.3 5.4v6.4h-3.6v-5.7c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3v5.8H10z" fill="currentColor"/></svg></a>
           <a href="https://fr.malt.be/profile/opheliepierre1" target="_blank" rel="noopener" class="social-chip">Malt <span aria-hidden="true">↗</span></a>
           <a href="https://comeup.com/fr/@moonflow-agency" target="_blank" rel="noopener" class="social-chip">ComeUp <span aria-hidden="true">↗</span></a>
         </div>
