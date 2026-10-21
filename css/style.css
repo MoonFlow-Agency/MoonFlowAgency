@@ -56,6 +56,13 @@ img { max-width: 100%; display: block; }
 .btn .arrow { transition: transform var(--transition); }
 .btn:hover .arrow { transform: translateX(4px); }
 
+/* ---------- Police (hébergée sur le site) ---------- */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat-latin-var.woff") format("woff");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+
 /* ---------- Header ---------- */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -195,3 +202,28 @@ section { padding: clamp(3.5rem, 8vw, 7rem) 0; }
   .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .footer-grid { grid-template-columns: 1fr; gap: 2.2rem; }
 }
+
+/* ---------- Bandeau cookies ---------- */
+.cookie-manage { background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; }
+.cookie-manage:hover { text-decoration: underline; }
+.cookie-banner {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 200;
+  max-width: 560px; margin: 0 auto;
+  background: var(--blanc); color: var(--gris-txt);
+  border: 1px solid rgba(142,165,154,0.35); border-radius: var(--radius);
+  box-shadow: 0 30px 70px -30px rgba(63,87,71,0.45);
+  padding: 1.4rem 1.5rem 1.3rem; font-size: 0.9rem; line-height: 1.6;
+}
+.cookie-banner[hidden] { display: none; }
+.cookie-banner h2 { font-size: 1.05rem; color: var(--sauge); margin: 0 0 0.4rem; }
+.cookie-banner p { margin: 0 0 1rem; }
+.cookie-banner a { color: var(--sauge); text-decoration: underline; }
+.cookie-actions { display: flex; gap: 0.7rem; }
+.cookie-actions button {
+  flex: 1; font: inherit; font-weight: 600; font-size: 0.9rem; cursor: pointer;
+  padding: 0.75rem 1rem; border-radius: 999px; border: 1.5px solid var(--sauge); transition: var(--transition);
+}
+.cookie-actions .cookie-refuse { background: transparent; color: var(--sauge); }
+.cookie-actions .cookie-refuse:hover { background: var(--beige); }
+.cookie-actions .cookie-accept { background: var(--sauge); color: var(--beige); }
+.cookie-actions .cookie-accept:hover { background: var(--eucalyptus); border-color: var(--eucalyptus); }
