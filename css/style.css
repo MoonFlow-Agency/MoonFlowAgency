@@ -64,10 +64,17 @@ img { max-width: 100%; display: block; }
   transition: var(--transition);
   background: transparent;
 }
-.site-header.scrolled {
+/* Fond flouté sur un pseudo-élément : un backdrop-filter sur le header
+   lui-même piège le menu mobile (position: fixed) dans sa hauteur. */
+.site-header::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
   background: rgba(250, 249, 247, 0.85);
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 rgba(63, 87, 71, 0.08);
+  opacity: 0; transition: opacity var(--transition);
+}
+.site-header.scrolled::before { opacity: 1; }
+.site-header.scrolled {
   padding-top: 0.7rem; padding-bottom: 0.7rem;
 }
 .site-header .logo { display: flex; align-items: center; gap: 0.7rem; }
@@ -95,6 +102,7 @@ img { max-width: 100%; display: block; }
 .nav a.btn-ghost { color: var(--sauge); }
 .nav a.btn-ghost:hover { color: var(--beige); }
 .nav a.btn::after { display: none; }
+.nav a.btn { white-space: nowrap; }
 
 .burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
 .burger span { width: 26px; height: 2px; background: var(--sauge); transition: var(--transition); }
