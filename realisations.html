@@ -85,6 +85,7 @@
 .gallery.wide { grid-template-columns:repeat(2,1fr); }
 .gallery.wide img { aspect-ratio:16/9; object-position:center; }
 .gallery.square img { aspect-ratio:1/1; object-position:center top; }
+.gallery.three { grid-template-columns:repeat(3,1fr); gap:1.4rem; }
 .gallery figcaption b { display:block; color:var(--sauge); font-weight:600; font-size:0.92rem; }
 
 .case-result { margin-top:3.2rem; background:var(--sauge); color:var(--beige); border-radius:var(--radius); padding:clamp(1.8rem,4vw,2.8rem); display:grid; grid-template-columns:0.8fr 1.2fr; gap:2.5rem; align-items:center; }
@@ -100,7 +101,7 @@
   .gallery.wide { grid-template-columns:1fr; }
   .case-head { grid-template-columns:1fr; gap:2rem; align-items:start; }
   .case-steps { grid-template-columns:1fr; }
-  .gallery { grid-template-columns:repeat(2,1fr); }
+  .gallery, .gallery.three { grid-template-columns:repeat(2,1fr); }
   .case-result { grid-template-columns:1fr; gap:1.4rem; }
 }
 @media (max-width: 860px){ .proj-grid{ grid-template-columns:1fr; } }
@@ -348,7 +349,7 @@
         <h2 class="reveal d1">Produits d'entretien sur Amazon et Bol.com</h2>
         <p class="lead reveal d2">Bevil, Fulgurant, Epur, Sassi et Antisplash : cinq marques de produits d'entretien de Chembo Bevil. De 2021 à 2026, l'enjeu était de développer leurs ventes en ligne, d'abord sur Amazon en France, puis pays par pays en Europe et sur Bol.com.</p>
         <div class="case-tags reveal d3">
-          <span class="case-tag">Amazon Vendor Central</span><span class="case-tag">Référencement des fiches</span><span class="case-tag">Bol.com</span><span class="case-tag">Contenu A+</span><span class="case-tag">Boutiques de marque</span><span class="case-tag">Amazon Ads</span><span class="case-tag">Suivi des KPI</span>
+          <span class="case-tag">Amazon Vendor Central</span><span class="case-tag">Référencement des fiches</span><span class="case-tag">Bol.com</span><span class="case-tag">Contenu A+</span><span class="case-tag">Boutiques de marque</span><span class="case-tag">Amazon Ads</span><span class="case-tag">Suivi des KPI</span><span class="case-tag">Sécurité et conformité</span>
         </div>
       </div>
       <div class="case-facts reveal d2">
@@ -361,7 +362,7 @@
     <div class="case-steps">
       <div class="case-step reveal"><div class="num">01</div><h4>Le besoin</h4><p>Rendre l'ensemble du catalogue visible et compétitif sur les marketplaces, dans un marché où les prix des concurrents bougent en permanence.</p></div>
       <div class="case-step reveal d1"><div class="num">02</div><h4>La démarche</h4><p>Fiches produits travaillées pour le référencement et illustrées d'images concrètes d'utilisation, contenu A+ et boutiques de marque, en cohérence avec les réseaux sociaux. Publicité Amazon Ads en continu et tests ciblés sur Bol.com.</p></div>
-      <div class="case-step reveal d2"><div class="num">03</div><h4>Le pilotage</h4><p>Suivi complet des KPI, veille des prix concurrents sur Bol.com et ajustements réguliers des fiches et des campagnes.</p></div>
+      <div class="case-step reveal d2"><div class="num">03</div><h4>Le pilotage</h4><p>Suivi complet des KPI, veille des prix concurrents sur Bol.com et conformité des fiches : informations de sécurité et légales, fiches techniques et fiches de données de sécurité.</p></div>
     </div>
 
     <p class="section-eyebrow reveal" style="margin-top:-0.8rem;">Un développement progressif</p>
@@ -371,13 +372,15 @@
       <div class="case-step reveal d2"><div class="num">3</div><h4>2025 · Diversifier</h4><p>Lancement sur Bol.com en Belgique et aux Pays-Bas, avec une veille des prix et des tests publicitaires : 3 fois plus de commandes par jour en un an.</p></div>
     </div>
 
-    <div class="gallery square">
+    <div class="gallery square three">
       <figure class="reveal"><div class="g-img"><img src="assets/realisations/ecom-epur-boutique.jpg" alt="Boutique de marque Epur Biosolution sur Amazon, avec ses meilleures ventes et une mise en scène des produits" loading="lazy" /></div><figcaption><b>Boutique de marque</b>Toute la gamme Epur, mise en scène.</figcaption></figure>
       <figure class="reveal d1"><div class="g-img"><img src="assets/realisations/ecom-fulgurant-gamme.jpg" alt="Gamme de détartrants Fulgurant photographiée dans une salle de bain" loading="lazy" /></div><figcaption><b>Image d'utilisation</b>Les produits dans leur contexte réel.</figcaption></figure>
       <figure class="reveal d2"><div class="g-img"><img src="assets/realisations/ecom-fulgurant-infographie.jpg" alt="Image explicative du détartrant industriel Fulgurant : usages, mode d'emploi et recommandations" loading="lazy" /></div><figcaption><b>Image explicative</b>Usages et mode d'emploi en un coup d'œil.</figcaption></figure>
-      <figure class="reveal d3"><div class="g-img"><img src="assets/realisations/ecom-fulgurant-avant-apres.jpg" alt="Visuel avant/après d'un lavabo entartré puis nettoyé avec Fulgurant" loading="lazy" /></div><figcaption><b>Avant / après</b>Le résultat, sans un mot.</figcaption></figure>
+      <figure class="reveal"><div class="g-img"><img src="assets/realisations/ecom-fulgurant-avant-apres.jpg" alt="Visuel avant/après d'un lavabo entartré puis nettoyé avec Fulgurant" loading="lazy" /></div><figcaption><b>Avant / après</b>Le résultat, sans un mot.</figcaption></figure>
+      <figure class="reveal d1"><div class="g-img"><img src="assets/realisations/ecom-bol-fiche.jpg" alt="Fiche produit Bol.com du détartrant WC broyeur Fulgurant" loading="lazy" /></div><figcaption><b>Fiche Bol.com</b>Visuels et textes bilingues, pour la Belgique et les Pays-Bas.</figcaption></figure>
+      <figure class="reveal d2"><div class="g-img"><img src="assets/realisations/ecom-bol-securite.jpg" alt="Informations fabricant et spécifications produit sur une fiche Bol.com" loading="lazy" /></div><figcaption><b>Sécurité et conformité</b>Informations légales et techniques complètes.</figcaption></figure>
     </div>
-    <p class="case-note">Captures des pages publiques Amazon.</p>
+    <p class="case-note">Captures des pages publiques Amazon et Bol.com.</p>
 
     <div class="case-result reveal">
       <h3>Ce que ça change</h3>
