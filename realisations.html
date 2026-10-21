@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Réalisations et études de cas | MoonFlow Agency</title>
-<meta name="description" content="Refonte de site, audit digital, publicité locale Google Ads et Meta Ads, templates réseaux sociaux : le besoin, la démarche et le résultat de chaque projet." />
+<meta name="description" content="Refonte de site, e-commerce Amazon et Bol.com, audit digital, publicité locale, réseaux sociaux : le besoin, la démarche et le résultat de chaque projet." />
 <link rel="canonical" href="https://moonflowagency.com/realisations" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://moonflowagency.com/realisations" />
 <meta property="og:title" content="Réalisations et études de cas | MoonFlow Agency" />
-<meta property="og:description" content="Refonte de site, audit digital, publicité locale Google Ads et Meta Ads, templates réseaux sociaux : le besoin, la démarche et le résultat de chaque projet." />
+<meta property="og:description" content="Refonte de site, e-commerce Amazon et Bol.com, audit digital, publicité locale, réseaux sociaux : le besoin, la démarche et le résultat de chaque projet." />
 <meta property="og:image" content="https://moonflowagency.com/assets/og-realisations.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -104,6 +104,20 @@
 }
 @media (max-width: 860px){ .proj-grid{ grid-template-columns:1fr; } }
 @media (max-width: 480px){ .fact { padding:1.1rem 0.6rem; } .fact .n { font-size:1.6rem; } .fact .l { font-size:0.62rem; letter-spacing:0.1em; } }
+
+/* ===== Visuel e-commerce (sans image) ===== */
+.ecom-visual { position:relative; width:100%; height:100%; background:var(--beige); overflow:hidden; display:flex; flex-direction:column; justify-content:center; gap:1rem; padding:clamp(1.4rem,4vw,2.4rem); }
+.ecom-visual::before { content:""; position:absolute; width:55%; aspect-ratio:1; border-radius:50%; background:var(--eucalyptus); opacity:0.35; right:-14%; top:-22%; }
+.ecom-visual::after { content:""; position:absolute; width:34%; aspect-ratio:1; border-radius:50%; background:var(--nude); opacity:0.6; left:-10%; bottom:-16%; }
+.ecom-visual > * { position:relative; z-index:1; }
+.ecom-big { font-size:clamp(2.6rem,6vw,3.6rem); font-weight:800; color:var(--sauge); line-height:1; letter-spacing:-0.03em; }
+.ecom-big small { display:block; font-size:0.85rem; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--eucalyptus); margin-top:0.5rem; }
+.ecom-chips { display:flex; flex-wrap:wrap; gap:0.45rem; }
+.ecom-chips span { background:var(--blanc); color:var(--sauge); font-size:0.78rem; font-weight:600; padding:0.35rem 0.8rem; border-radius:999px; }
+.ecom-chips span.alt { background:var(--sauge); color:var(--beige); }
+.proj-thumb .ecom-visual { transition:transform 0.8s cubic-bezier(0.22,1,0.36,1); }
+.proj-card:hover .proj-thumb .ecom-visual { transform:scale(1.03); }
+.case-note { font-size:0.85rem; opacity:0.7; margin-top:1rem; }
 </style>
 </head>
 <body>
@@ -132,6 +146,7 @@
   <div class="wrap">
     <nav class="svc-nav reveal" aria-label="Réalisations par service">
       <a href="#groupe-sites">Sites web</a>
+      <a href="#groupe-ecommerce">E-commerce &amp; marketplaces</a>
       <a href="#groupe-consultance">Audit &amp; stratégie</a>
       <a href="#groupe-social">Réseaux sociaux &amp; publicité</a>
     </nav>
@@ -158,6 +173,28 @@
           <span class="proj-cat">Site web · Stratégie de contenu</span>
           <h3>Site vitrine MoonFlow Agency</h3>
           <p>Un site sur mesure, rapide et cohérent avec la charte, codé en HTML et déployé sur Netlify.</p>
+          <span class="proj-more">Voir l'étude de cas <span class="arrow" aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      </div>
+    </div>
+
+    <div class="svc-group" id="groupe-ecommerce">
+      <div class="svc-group-head reveal">
+        <div><p class="section-eyebrow">E-commerce</p><h2>E-commerce &amp; marketplaces</h2></div>
+        <div class="svc-group-side"><p>Des catalogues complets, suivis de près, sur Amazon et Bol.com.</p><a class="svc-link" href="services.html#ecommerce">Découvrir le service <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="proj-grid single">
+      <a class="proj-card reveal" href="#amazon-bol">
+        <div class="proj-thumb"><div class="ecom-visual" role="img" aria-label="Plus de 150 références actives sur Amazon dans 7 pays et sur Bol.com">
+          <div class="ecom-big">150+<small>Références actives</small></div>
+          <div class="ecom-chips"><span>France</span><span>Allemagne</span><span>Italie</span><span>Espagne</span><span>Suède</span><span>Belgique</span><span>Pays-Bas</span></div>
+          <div class="ecom-chips"><span class="alt">Amazon Vendor Central</span><span class="alt">Bol.com</span></div>
+        </div></div>
+        <div class="proj-body">
+          <span class="proj-cat">Marketplaces · Expérience avant MoonFlow</span>
+          <h3>Produits d'entretien sur Amazon et Bol.com</h3>
+          <p>Cinq marques de produits d'entretien, d'un lancement en France à une présence dans 7 pays européens.</p>
           <span class="proj-more">Voir l'étude de cas <span class="arrow" aria-hidden="true">→</span></span>
         </div>
       </a>
@@ -297,6 +334,51 @@
         <li><span><b>Un site qui lui appartient</b> : code sur mesure, sans dépendre d'un constructeur de site payant.</span></li>
       </ul>
     </div>
+    <a class="back-top" href="#top">↑ Retour aux réalisations</a>
+  </div>
+</section>
+
+<!-- ===== ÉTUDE DE CAS : E-COMMERCE AMAZON & BOL ===== -->
+<section class="case" id="amazon-bol">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <p class="section-eyebrow reveal">Étude de cas · E-commerce</p>
+        <h2 class="reveal d1">Produits d'entretien sur Amazon et Bol.com</h2>
+        <p class="lead reveal d2">Bevil, Fulgurant, Epur, Sassi et Antisplash : cinq marques de produits d'entretien de Chembo Bevil. De 2021 à 2026, l'enjeu était de développer leurs ventes en ligne, d'abord sur Amazon en France, puis pays par pays en Europe et sur Bol.com.</p>
+        <div class="case-tags reveal d3">
+          <span class="case-tag">Amazon Vendor Central</span><span class="case-tag">Bol.com</span><span class="case-tag">Contenu A+</span><span class="case-tag">Boutiques de marque</span><span class="case-tag">Amazon Ads</span><span class="case-tag">Suivi des KPI</span>
+        </div>
+      </div>
+      <div class="case-facts reveal d2">
+        <div class="fact"><div class="n">150+</div><div class="l">Références actives</div></div>
+        <div class="fact"><div class="n">7</div><div class="l">Pays Amazon</div></div>
+        <div class="fact"><div class="n">5</div><div class="l">Ans</div></div>
+      </div>
+    </div>
+
+    <div class="case-steps">
+      <div class="case-step reveal"><div class="num">01</div><h4>Le besoin</h4><p>Rendre l'ensemble du catalogue visible et compétitif sur les marketplaces, dans un marché où les prix des concurrents bougent en permanence.</p></div>
+      <div class="case-step reveal d1"><div class="num">02</div><h4>La démarche</h4><p>Fiches produits complètes, contenu A+ et boutiques de marque, en cohérence avec la communication sur les réseaux sociaux. Publicité Amazon Ads en continu et tests ciblés sur Bol.com.</p></div>
+      <div class="case-step reveal d2"><div class="num">03</div><h4>Le pilotage</h4><p>Suivi complet des KPI, veille des prix concurrents sur Bol.com et ajustements réguliers des fiches et des campagnes.</p></div>
+    </div>
+
+    <p class="section-eyebrow reveal" style="margin-top:-0.8rem;">Un développement progressif</p>
+    <div class="case-steps">
+      <div class="case-step reveal"><div class="num">1</div><h4>2021 · Lancer</h4><p>Ouverture sur Amazon France en Vendor Central : mise en ligne et optimisation de tout le catalogue.</p></div>
+      <div class="case-step reveal d1"><div class="num">2</div><h4>Puis · Étendre</h4><p>Ouverture progressive, pays par pays : Italie, Espagne, Suède, Belgique, Pays-Bas et Allemagne.</p></div>
+      <div class="case-step reveal d2"><div class="num">3</div><h4>2025 · Diversifier</h4><p>Lancement sur Bol.com en Belgique et aux Pays-Bas, avec une veille des prix et des tests publicitaires pour y faire sa place.</p></div>
+    </div>
+
+    <div class="case-result reveal">
+      <h3>Ce que ça change</h3>
+      <ul>
+        <li><span><b>Un catalogue entièrement en ligne</b> : plus de 150 références actives, avec des fiches complètes.</span></li>
+        <li><span><b>Une présence européenne</b> : 7 pays sur Amazon et 2 sur Bol.com, ouverts progressivement.</span></li>
+        <li><span><b>Des marques cohérentes</b> : contenu A+, boutiques de marque et réseaux sociaux racontent la même histoire.</span></li>
+      </ul>
+    </div>
+    <p class="case-note">Réalisé en tant que Product Manager chez Chembo Bevil, avant la création de MoonFlow Agency.</p>
     <a class="back-top" href="#top">↑ Retour aux réalisations</a>
   </div>
 </section>
