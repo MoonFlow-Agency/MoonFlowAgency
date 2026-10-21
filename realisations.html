@@ -2,6 +2,13 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8" />
+<script>
+/* Consentement : Google Analytics refusé par défaut, accordé seulement après accord du visiteur */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+try { var mfc = JSON.parse(localStorage.getItem('mf-consent') || 'null'); if (mfc && mfc.v === 'granted' && Date.now() - mfc.t < 340e8) { gtag('consent', 'update', { analytics_storage: 'granted' }); } } catch (e) {}
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Réalisations et études de cas | MoonFlow Agency</title>
 <meta name="description" content="Refonte de site, e-commerce Amazon et Bol.com, audit digital, publicité locale, réseaux sociaux : le besoin, la démarche et le résultat de chaque projet." />
@@ -17,9 +24,7 @@
 <meta property="og:description" content="Refonte de site, e-commerce Amazon et Bol.com, audit digital, publicité locale, réseaux sociaux : le besoin, la démarche et le résultat de chaque projet." />
 <meta property="og:image" content="https://moonflowagency.com/assets/og-realisations.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="preload" href="/fonts/montserrat-latin-var.woff" as="font" type="font/woff" crossorigin />
 <link rel="stylesheet" href="css/style.css" />
 <style>
 /* ===== Navigation par service ===== */
@@ -576,7 +581,7 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 MoonFlow Agency · Tous droits réservés · <a href="https://www.freepik.com" target="_blank" rel="noopener" style="opacity:0.85;">Visuels : Freepik</a></span>
-      <div class="legal"><a href='mentions-legales.html'>Mentions légales</a><a href='politique-confidentialite.html'>Politique de confidentialité</a></div>
+      <div class="legal"><a href='mentions-legales.html'>Mentions légales</a><a href='politique-confidentialite.html'>Politique de confidentialité</a><button type="button" class="cookie-manage" data-cookie-manage>Gérer les cookies</button></div>
     </div>
   </div>
 </footer>
