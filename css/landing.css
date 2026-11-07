@@ -15,6 +15,7 @@
 .lp-hero {
   padding: 9.5rem 0 5rem; overflow: hidden;
   background:
+    linear-gradient(to bottom, rgba(250,249,247,0) 55%, var(--blanc) 100%),
     radial-gradient(circle at 10% 80%, rgba(142,165,154,0.16), transparent 45%),
     radial-gradient(circle at 85% 15%, rgba(216,193,188,0.22), transparent 45%);
 }
