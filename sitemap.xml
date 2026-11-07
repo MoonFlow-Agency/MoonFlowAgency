@@ -33,6 +33,19 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://moonflowagency.com/livret-accueil-numerique</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://moonflowagency.com/planner-2027</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Blog -->
   <url>
     <loc>https://moonflowagency.com/blog</loc>
