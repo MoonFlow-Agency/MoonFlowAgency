@@ -120,6 +120,11 @@
 .merci { display: none; text-align: center; padding: 2rem 0.5rem; color: var(--sauge); font-weight: 500; }
 .merci strong { display: block; font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; }
 .merci .btn { margin-top: 1.5rem; }
+.merci p { margin-top: 0.8rem; }
+.merci-reseaux { margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid rgba(142,165,154,0.25); font-size: 0.95rem; }
+.merci-reseaux .icones { display: flex; justify-content: center; gap: 0.7rem; margin-top: 0.9rem; }
+.merci-reseaux .icones a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: var(--beige); color: var(--sauge); transition: var(--transition); }
+.merci-reseaux .icones a:hover { background: var(--sauge); color: var(--beige); transform: translateY(-2px); }
 .form-card.envoye form { display: none; }
 .form-card.envoye .merci { display: block; }
 @media (max-width: 900px) { .lp-contact { grid-template-columns: 1fr; gap: 2.5rem; } .deux { grid-template-columns: 1fr; } }
@@ -142,7 +147,7 @@
 .cadeau span { font-size: 1.2rem; font-weight: 700; color: var(--sauge); }
 .galerie { display: flex; gap: 22px; overflow-x: auto; padding: 46px var(--pad) 26px; scroll-snap-type: x mandatory; max-width: var(--max); margin: 0 auto; }
 .galerie figure { flex: 0 0 220px; scroll-snap-align: start; }
-.galerie img { width: 100%; aspect-ratio: 650 / 860; object-fit: cover; border-radius: 12px; border: 1px solid rgba(142,165,154,0.25); box-shadow: 0 14px 30px -20px rgba(40,56,46,0.45); background: #fff; }
+.galerie img { width: 100%; height: auto; aspect-ratio: 560 / 741; object-fit: contain; border-radius: 12px; border: 1px solid rgba(142,165,154,0.25); box-shadow: 0 14px 30px -20px rgba(40,56,46,0.45); background: #fff; }
 .galerie figcaption { font-size: 0.82rem; font-weight: 600; color: var(--sauge); margin-top: 10px; line-height: 1.4; }
 .galerie figcaption span { display: block; font-weight: 400; color: var(--gris-txt); }
 .galerie::-webkit-scrollbar { height: 6px; }
