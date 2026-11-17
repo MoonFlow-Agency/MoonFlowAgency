@@ -262,3 +262,5 @@ section { padding: clamp(3.5rem, 8vw, 7rem) 0; }
 .article-body .steps li p { margin: 0; }
 .article-body ul.checks li::before { content: "✓"; color: var(--sauge); }
 .article-body .example blockquote, .article-body .example ul { margin-bottom: 1.2rem; }
+.article-cta .cta-link { display: block; margin-top: 1rem; color: var(--beige); font-weight: 600; font-size: 0.95rem; text-decoration: underline; text-underline-offset: 3px; }
+.article-cta .cta-link:hover { color: var(--blanc); }
