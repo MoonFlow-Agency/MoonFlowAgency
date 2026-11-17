@@ -89,6 +89,7 @@ try { var mfc = JSON.parse(localStorage.getItem('mf-consent') || 'null'); if (mf
 .article-nav a:hover { color: var(--eucalyptus); }
 .article-nav a.next { margin-left: auto; text-align: right; }
 .back-blog { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--eucalyptus); font-weight: 600; font-size: 0.9rem; margin-bottom: 2rem; }
+
 </style>
 </head>
 <body>
@@ -123,43 +124,48 @@ try { var mfc = JSON.parse(localStorage.getItem('mf-consent') || 'null'); if (mf
 
       <p>C'est une phrase que j'entends souvent. Quand on vient de se lancer, ou quand on est une PME, pas besoin d'avoir le budget d'une grande entreprise pour être visible. Mais il y a une condition : ne pas s'éparpiller. 🎯</p>
 
-      <h2>Petit budget : le piège de vouloir être partout</h2>
+      <nav class="article-toc reveal" aria-label="Sommaire"><p>Au sommaire</p><ol><li><a href="#piege">Petit budget : le piège de vouloir être partout</a></li><li><a href="#gratuit">Les outils gratuits pour être visible localement</a></li><li><a href="#ciblage">Publicité locale : viser petit, mais viser juste</a></li><li><a href="#proximite">Commerce de proximité : misez sur ce qui vous rend unique</a></li><li><a href="#regularite">La régularité plutôt que le coup d'éclat</a></li><li><a href="#mesurer">Mesurer vos résultats, même simplement</a></li></ol></nav>
+
+      <h2 id="piege">Petit budget : le piège de vouloir être partout</h2>
       <p>Instagram, TikTok, Facebook, Google, LinkedIn, des flyers, une annonce dans le journal local… Avec un budget serré, vouloir être partout revient souvent à n'être vu nulle part.</p>
       <p>Résultat : quelques euros par canal, aucun résultat visible, et cette conclusion bien connue : « La pub, ça ne marche pas pour moi. » 🤦‍♀️</p>
-      <p>En réalité, ce n'est pas la publicité qui ne marche pas. C'est la dispersion. Pour une petite entreprise, le marketing local fonctionne d'abord quand il est concentré.</p>
+      <div class="pull reveal">En réalité, ce n'est pas la publicité qui ne marche pas. C'est la dispersion.<span>Pour une petite entreprise, le marketing local fonctionne d'abord quand il est concentré.</span></div>
 
-      <h2>Les outils gratuits pour être visible localement</h2>
+      <h2 id="gratuit">Les outils gratuits pour être visible localement</h2>
       <p>Avant de dépenser le moindre euro, quelques bases ne coûtent rien et font une vraie différence pour votre visibilité locale :</p>
-      <ul>
-        <li><strong>Une fiche Google Business complète</strong> : horaires, photos, catégorie, zone desservie. C'est souvent la première chose que vos clients voient quand ils cherchent « coiffeur Mouscron » ou « plombier Tournai ».</li>
-        <li><strong>Des avis clients</strong> : demandez-les juste après une prestation réussie, quand la satisfaction est encore fraîche.</li>
-        <li><strong>Des pages réseaux à jour</strong>, avec les informations essentielles visibles en un coup d'œil.</li>
-        <li><strong>Votre réseau local</strong> : les groupes Facebook de votre commune, les commerçants voisins, les associations.</li>
-      </ul>
+      <div class="tool-grid">
+        <div class="tool-card"><h3>Une fiche Google Business complète</h3><p>Horaires, photos, catégorie, zone desservie. C'est souvent la première chose que vos clients voient quand ils cherchent « coiffeur Mouscron » ou « plombier Tournai ».</p></div>
+        <div class="tool-card"><h3>Des avis clients</h3><p>Demandez-les juste après une prestation réussie, quand la satisfaction est encore fraîche.</p></div>
+        <div class="tool-card"><h3>Des pages réseaux à jour</h3><p>Avec les informations essentielles visibles en un coup d'œil.</p></div>
+        <div class="tool-card"><h3>Votre réseau local</h3><p>Les groupes Facebook de votre commune, les commerçants voisins, les associations.</p></div>
+      </div>
       <p>Ces leviers conditionnent tout le reste. Une publicité qui envoie vers une fiche vide ou une page abandonnée, c'est de l'argent jeté par la fenêtre. C'est d'ailleurs la même logique que pour <a href="../../02/faire-le-buzz-bonne-ou-mauvaise-idee/">le buzz</a> : avant d'attirer du monde, il faut poser les bases.</p>
 
-      <h2>Publicité locale : viser petit, mais viser juste</h2>
+      <h2 id="ciblage">Publicité locale : viser petit, mais viser juste</h2>
       <p>Pour une entreprise locale, la grande force de la publicité en ligne, c'est le ciblage géographique.</p>
+      <div class="example"><span class="example-label">Exemple concret</span>
       <p>Prenons l'exemple d'une entreprise tournaisienne que j'accompagne avec un budget très serré. J'ai mis en place des campagnes Google Ads et Meta Ads avec un ciblage volontairement resserré : la ville et ses environs, dans un rayon de quelques dizaines de kilomètres, et uniquement les zones où l'entreprise intervient vraiment.</p>
       <p>Pourquoi ? Parce qu'une personne qui habite à 100 kilomètres ne fera jamais appel à une entreprise de Tournai pour ce service. Chaque euro dépensé pour elle est un euro perdu. Que vous soyez en Wallonie picarde, ailleurs en Hainaut ou dans le Nord de la France, le principe est le même : votre budget doit rester là où vivent vos clients.</p>
+      </div>
       <p>Les deux plateformes se complètent :</p>
-      <ul>
-        <li><strong>Google Ads</strong> touche les personnes qui cherchent déjà le service, au moment où elles en ont besoin.</li>
-        <li><strong>Meta Ads</strong> (Facebook et Instagram) fait connaître l'entreprise avant même que le besoin arrive.</li>
-      </ul>
+      <div class="duo">
+        <div class="g"><h3>Google Ads</h3><p>Touche les personnes qui cherchent déjà le service, au moment où elles en ont besoin.</p></div>
+        <div class="m"><h3>Meta Ads</h3><p>Facebook et Instagram font connaître l'entreprise avant même que le besoin arrive.</p></div>
+      </div>
 
-      <h2>Commerce de proximité : misez sur ce qui vous rend unique</h2>
+      <h2 id="proximite">Commerce de proximité : misez sur ce qui vous rend unique</h2>
       <p>Face aux grandes enseignes et aux plateformes nationales, un commerce de proximité ou un indépendant a un atout que l'argent n'achète pas : <strong>la proximité</strong>. Un interlocuteur du coin, qu'on peut appeler, qui se déplace et qui connaît la région.</p>
       <p>C'est exactement ce que vos publicités doivent montrer. Pas un message générique qu'on pourrait voir partout, mais ce qui fait que les gens ont envie de travailler avec vous, et pas avec un autre.</p>
 
-      <h2>La régularité plutôt que le coup d'éclat</h2>
+      <h2 id="regularite">La régularité plutôt que le coup d'éclat</h2>
       <p>Avec un petit budget, mieux vaut une présence régulière qu'une grosse campagne ponctuelle qui s'arrête aussitôt.</p>
       <p>Pour cette entreprise, plutôt que de créer des publicités à part, les publications de la page sont intégrées à des campagnes qui tournent sur plusieurs semaines. Le contenu sert deux fois, et l'entreprise reste visible dans la durée.</p>
 
-      <h2>Mesurer vos résultats, même simplement</h2>
+      <h2 id="mesurer">Mesurer vos résultats, même simplement</h2>
       <p>Pas besoin d'un tableau de bord compliqué. Google et Meta permettent de recevoir des rapports automatiques par e-mail. Un coup d'œil chaque semaine suffit pour savoir ce qui fonctionne.</p>
       <p>Et regardez les bons indicateurs : les appels, les demandes de devis, les itinéraires demandés. Les « j'aime » font plaisir, mais ils ne remplissent pas l'agenda. 😉</p>
 
+      <div class="summary reveal">
       <h2>En résumé</h2>
       <ul>
         <li>Un petit budget éparpillé ne donne rien : concentrez-le sur un ou deux canaux.</li>
@@ -168,6 +174,7 @@ try { var mfc = JSON.parse(localStorage.getItem('mf-consent') || 'null'); if (mf
         <li>Mettez en avant votre proximité : c'est votre meilleur argument face aux grandes enseignes.</li>
         <li>Préférez la régularité, et mesurez ce qui compte vraiment. 🌿</li>
       </ul>
+      </div>
 
       <div class="article-cta reveal">
         <p>Vous avez un petit budget et vous ne savez pas par où commencer ? Découvrez <a href="../../../../services.html">comment je peux vous accompagner</a>, ou parlons de votre projet.</p>
